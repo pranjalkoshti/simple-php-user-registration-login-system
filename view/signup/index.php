@@ -1,3 +1,8 @@
+<?php Session::session_start();
+
+
+?>
+
 <title>Sign up</title>
 
     <!-- Navigation -->
@@ -45,8 +50,8 @@
                   <div class="col-md-3"></div>
                   <div class="col-md-6">
 
-                   <form class="form_register" action="./page_backend/register-back.php" method="post" >
-              <div class="message"><span> <?php echo $_SESSION['message']; unset($_SESSION['message']); ?></span></div>
+                   <form class="form_register" action="signup/signup_user" method="post" >
+              <div class="message"><span> <?php echo $_SESSION['message']; unset($_SESSION['message']);?></span></div>
                     <div class="jumbotron">
 
                       <p>Register</p>

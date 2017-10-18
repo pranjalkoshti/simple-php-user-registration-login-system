@@ -4,8 +4,11 @@ require "config/db_connection.php";
 require "lib/view.php";
 require "lib/error.php";
 require "lib/model.php";
-require "model/Login_model.php";
+require "model/login_model.php";
+require "model/signup_model.php";
 require "lib/session.php";
+require "lib/verification.php";
+
 
 class Controller extends View
 {
@@ -14,6 +17,7 @@ class Controller extends View
   {
   Session::session_start();
   Session::session_set('user','user');
+
    $error = new Error_page;
     $url = $_GET['url'];
     $url = explode("/" , $url );
